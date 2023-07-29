@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<style>
+    .box{
+        background-color: goldenrod;
+        padding: 50px;
+        margin: 30px;
+        display: inline-block;
+    }
+    li{
+        list-style: none;
+    }
+    .fav{
+        background-color: aquamarine;
+
+    }
+</style>
+<body>
+    <h1>Vue JS Learning</h1>
+<div id="app">
+    <div v-if="show">
+       <ul v-for="book in filteredBooks">
+        <li :class="{fav:book.isFav}" @click="Fav(book)">
+            <img :src=" book.img " alt="">
+        <p>Name- {{ book.title }}</p>
+        <p>{{ book.age }}</p>   
+        <hr>
+        </li>
+       </ul>    
+    </div>
+        <button @click="show=!show">
+        <span v-if="!show">show</span>
+        <span v-if="show">hide</span></button>
+
+        <div class="box" @mouseover="Over($event,'data')">mouse over</div>
+        <div class="box" @mouseleave="Leave">mouse leave</div>
+        <div class="box" @dblclick="Double">double click</div>
+        <a :href="link">google</a>
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
