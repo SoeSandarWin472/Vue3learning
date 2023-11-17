@@ -2,34 +2,34 @@ const app=Vue.createApp({
     data(){
         return{
         Books:[
-                    {   img:"imgs/1.jpg",
-                        title:"hi there",
-                        age:20,
-                        isFav:true
-                    },
-                    {   img:"imgs/2.jpg",
-                        title:"hi here",
-                        age:23,
-                        isFav:false
-                    },
-                    {   img:"imgs/3.jpg",
-                        title:"hello there",
-                        age:25,
-                        isFav:true
-                    },
+            {   img:"imgs/1.jpg",
+                title:"hi there",
+                age:20,
+                isFav:true
+            },
+            {   img:"imgs/2.jpg",
+                title:"hi here",
+                age:23,
+                isFav:false
+            },
+            {   img:"imgs/3.jpg",
+                title:"hello there",
+                age:25,
+                isFav:true
+            },
             ],
             show:true,
             link:"http://www.google.com"
         }
     },
             methods:{
-                Over(event,data){
+                mouseOver(event,data){
                     console.log("hi",event.type,data)
                 },
-                Leave(){
+                mouseLeave(){
                     console.log("leave")
                 },
-                Double(){
+                dbDouble(){
                     console.log("double")
                 },
                 Fav(book){
